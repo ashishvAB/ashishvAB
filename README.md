@@ -110,7 +110,7 @@ Turn test runs into actionable trends:
 - **Environment Comparison**: Pass rates, execution counts, and performance across envs
 - **Test Case Analysis**: Individual test trends, duration buckets, and status heatmaps
 
-<center><img src='assets/analytics.gif' width='800'></center>
+<!-- <center><img src='assets/analytics.gif' width='800'></center> -->
 
 ---
 
@@ -134,13 +134,12 @@ Provides AI-generated short summaries of test runs, highlighting major events an
 - **Communication**: Slack/Teams notifications with run summaries and quick links
 - **Version Control**: GitHub integration with PR status and commit linking
 
----
 
-### **Future Vision**
-- 🔮 **Advanced AI Insights** - Predictive failure analysis and trend forecasting
-- 🌐 **Multi-Framework Support** - Expand beyond Playwright to Cypress, Selenium
-- 📊 **Custom Dashboards** - Build personalized views for your team's workflow
-- 🎯 **Test Impact Analysis** - Understand which tests matter for each code change
+## Upcoming Features : The Road Ahead
+- **Advanced AI Insights** - Predictive failure analysis and trend forecasting
+- **Multi-Framework Support** - Expand beyond Playwright to Cypress, Selenium
+- **Custom Dashboards** - Build personalized views for your team's workflow
+- **Test Impact Analysis** - Understand which tests matter for each code change
 
 
 
@@ -159,7 +158,6 @@ Provides AI-generated short summaries of test runs, highlighting major events an
 
 
 ## Contacts 
-### **💼 Business Inquiries**
 - **Sales**: [sales@testdino.com](mailto:sales@testdino.com) 
 - **Careers**: [careers@testdino.com](mailto:careers@testdino.com)
 
