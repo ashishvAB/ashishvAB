@@ -8,7 +8,7 @@
   <a href="#why-testdino" >Why Testdino?</a> •
   <a href="#key-features" >Key Features</a> •
   <a href="#getting-started" >Getting Started</a> •
-  <a href="#feature-overview" >Features Overview</a> •
+  <a href="#features-overview" >Features Overview</a> •
   <a href="#resources" >Documentations & Resources</a> •
   <a href="#contact">Contacts</a> 
 </p>
@@ -61,23 +61,12 @@ Testdino empowers QA and development teams to ship faster and with greater confi
   if: always()
 ```
 
-### 3. **Configure Playwright Reporter**
-```javascript
-// playwright.config.js
-export default {
-  reporter: [
-    ['html'],
-    ['json', { outputFile: 'results.json' }]
-  ],
-  // ... your existing config
-};
-```
 That's it! Your next test run will appear in Testdino with AI-powered insights, failure categorization, and actionable recommendations.
 
 **[Complete Setup Guide →](https://docs.testdino.com/docs/playwright/)**
 
 
-## Feature Overview
+## Features Overview
 
 ###  **Dashboard - Your Test Health Control Center**
 
@@ -116,7 +105,7 @@ Turn test runs into actionable trends:
 - **Environment Comparison**: Pass rates, execution counts, and performance across envs
 - **Test Case Analysis**: Individual test trends, duration buckets, and status heatmaps
 
-<center><img src='assets/analytics.gif' width='500'></center>
+<center><img src='assets/analytics.gif' width='800'></center>
 
 ---
 
@@ -168,23 +157,23 @@ Provides AI-generated short summaries of test runs, highlighting major events an
 - **[Blog](https://testdino.com/blog)** - Testing insights and industry best practices
 
 
-## Contact 
-
-### **Get Help**
-- **[Help Center](https://help.testdino.com)** - Self-service documentation and FAQs
-- **[Community Forum](https://community.testdino.com)** - Ask questions and share experiences  
-- **[Email Support](mailto:support@testdino.com)** - Direct assistance from our team
-
-
-### **🌐 Connect With Us**
-- **[Discord Community](https://discord.gg/testdino)** - Join 2,000+ testing professionals
-- **[Twitter](https://twitter.com/testdino)** - Latest updates and announcements
-- **[LinkedIn](linkedin.com/company/106091224/admin/dashboard)** - Company news and industry insights
-
-
+## Contacts 
 ### **💼 Business Inquiries**
 - **Sales**: [sales@testdino.com](mailto:sales@testdino.com) 
 - **Careers**: [careers@testdino.com](mailto:careers@testdino.com)
+
+
+<p align="center" style="display: flex; gap: 32px; justify-content: center; align-items: center; flex-wrap: wrap;">
+  <a href="www.testdino.com" target="_blank" rel="noopener noreferrer" title="Join our Discord">
+   <img src="https://static.cdnlogo.com/logos/d/33/discord-wordmark.svg" width='100' height='80px' alt="Discord"></a>
+  </a>
+ <a href="www.testdino.com"><img src="https://static.cdnlogo.com/logos/x/9/x.svg" width='80' height='30px'></a>
+  <a href="https://www.linkedin.com/company/testdino" target="_blank" rel="noopener noreferrer" title="Connect on LinkedIn">
+    <img src="https://static.cdnlogo.com/logos/l/15/linkedin-2013.svg" width='80' height='30px' alt="LinkedIn">
+  </a>
+</p>
+
+
 
 ---
 
