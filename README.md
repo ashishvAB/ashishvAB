@@ -28,6 +28,10 @@ Testdino empowers QA and development teams to ship faster and with greater confi
 
 3. **Centralizes Test Data :** All test runs, pull requests, branches, and environments are unified in one platform, giving teams a single source of truth and accelerating decision-making.
 
+
+## Platform Overview
+<img src='assets/Entire platform review_1080.gif'>
+
 ## Key Features
 
 - **AI Failure Classification** - Automatically categorize as Actual Bug, UI Change, Unstable, or Misc
@@ -67,6 +71,7 @@ That's it! Your next test run will appear in Testdino with AI-powered insights, 
 
 
 ## Features Overview
+
 
 ###  **Dashboard - Your Test Health Control Center**
 
