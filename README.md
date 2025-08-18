@@ -1,145 +1,202 @@
-<center><img src="image.png" width='700px'></center>
+<center>
+  <a href="https://testdino.com" target="_blank" rel="noopener noreferrer">
+    <img src="assets/logo.png" width="400px" alt="TestDino Logo">
+  </a>
+</center>
 
-# 🦖 TestDino
+<p align="center">
+  <a href="#why-testdino" >Why Testdino?</a> •
+  <a href="#key-features" >Key Features</a> •
+  <a href="#getting-started" >Getting Started</a> •
+  <a href="#feature-overview" >Feature Overview</a> •
+  <a href="#resources" >Documentation & Resources</a> •
+  <a href="#contact">Contact & Support</a> •
+</p>
 
-**AI-powered Test Analytics & Insights Platform**
-Transform raw Playwright test results into **clarity, accountability, and speed of decision-making**.
+---
+<h3 align='center'> The AI-Powered Playwright Test Intelligence Platform </h3>
+
+Testdino empowers QA and development teams to ship faster and with greater confidence by transforming raw Playwright test results into clear, actionable insights. Instead of sifting through noisy logs and endless reports, teams get instant visibility into what failed, why it matters, and what to do next. With AI-driven failure classification, trend analytics, and seamless integration into your existing workflow, Testdino eliminates manual triage and highlights the issues that truly impact your releases—so you can focus on building great products, not chasing test noise.
+
+
+##  Why Testdino?
+
+
+1. **Automates Manual Triage :** Engineers save 6-8 hours per week as Testdino automatically consolidates reports and analyzes failures, boosting productivity.
+
+2. **Clarifies Failure Causes:** Testdino uses AI to classify failure reasons and highlight critical issues, enabling teams to resolve problems faster and with greater confidence.
+
+3. **Centralizes Test Data :** All test runs, pull requests, branches, and environments are unified in one platform, giving teams a single source of truth and accelerating decision-making.
+
+
+---
+## Key Features
+
+- **AI Failure Classification** - Automatically categorize as Actual Bug, UI Change, Unstable, or Misc
+- **Role-Aware Dashboards** - QA, Developer, and Manager views with relevant metrics
+- **PR-Aware Review** - See test results directly in your GitHub PR workflow  
+- **Trend Analytics** - Track flakiness, new failures, retries, and execution speed over time
+- **Smart Filtering** - Filter by period, status, committer, environment, and branch
+- **Step-Level Evidence** - Screenshots, stack traces, and console logs for every failure
+- **One-Click Integration** - Single CI step connects your existing Playwright setup
+- **Team Collaboration** - Slack notifications, Jira/Linear bug creation, PR summaries
+- **Cross-Environment** - Compare test performance across Prod, Staging, Dev environments
+- **Release Readiness** - Get clear signals on what's safe to ship
 
 ---
 
-## 🚀 Why TestDino Matters
+##  Getting Started
 
-Modern development teams run thousands of automated tests across branches, environments, and CI pipelines. But:
+### 1. **Create Your Account**
+```bash
+# Sign up at app.testdino.com
+# Create Organization → Project → Generate API Key
+```
 
-* Developers waste time digging through logs to rediscover why a test broke.
-* QA engineers drown in repeated failures, trying to distinguish real defects from flaky runs.
-* Managers lack visibility into release readiness and long-term test health.
+### 2. **Add to Your CI Pipeline** 
+```yaml
+# GitHub Actions Example
+- name: Run Playwright Tests
+  run: npx playwright test --reporter=html,json
 
-These challenges create **lost productivity, slower releases, and eroded confidence in test automation**.
+- name: Upload to Testdino  
+  run: npx tdpw path/to/json/report --token ${{ secrets.TESTDINO_API_KEY }}
+  if: always()
+```
 
-✅ **TestDino solves this** by combining **historical context, advanced analytics, and AI-driven insights** into one platform. Instead of just raw pass/fail counts, TestDino tells you:
+### 3. **Configure Playwright Reporter**
+```javascript
+// playwright.config.js
+export default {
+  reporter: [
+    ['html'],
+    ['json', { outputFile: 'results.json' }]
+  ],
+  // ... your existing config
+};
+```
+That's it! Your next test run will appear in Testdino with AI-powered insights, failure categorization, and actionable recommendations.
 
-* *What failed.*
-* *Why it failed.*
-* *Whether it’s important.*
-* *Who needs to act next.*
-
----
-
-## ✨ Key Features at a Glance
-
-* 📊 **Historic Run Tracking** – Store every test execution with full logs, commits, and artifacts.
-* 🤖 **AI-Powered Failure Insights and Insights** – Categorize and prioritize failures automatically.
-* 📈 **Analytics & KPIs** – Track trends, stability scores, flaky patterns, and regression hotspots.
-* 🎯 **Filters & Focus Tools** – Zoom into the exact failures, branches, or users that matter.
-* 🖥️ **Role-Specific Dashboards** – Tailored perspectives for Developers, QA, and Managers.
-* 🔗 **Integrations & Collaboration** – Stay in sync with Slack, Jira, GitHub, GitLab, and CI/CD.
-
----
-
-## ⚡ Quick Setup
-
-1. Install the TestDino client in your CI/CD pipeline.
-2. Connect your repository and environments (Dev, QA, Staging, Production).
-3. Run your tests as usual — TestDino automatically captures, processes, and analyzes results.
-
-**No infrastructure changes. No complicated setup. Just plug in and get insights from the first run.**
+**[Complete Setup Guide →](https://docs.testdino.com/docs/playwright/)**
 
 ---
 
-## 🧩 Features in Action
+## Feature Overview
 
-### 📊 Historic Runs & Analytics
+###  **Dashboard - Your Test Health Control Center**
 
-Every test run is captured with **complete execution context**:
+Get instant visibility with role-specific views over the period of 7/14/30 days:
+- **QA Dashboard**: Failure categories, flaky tests, cross-environment performance
+- **Developer Dashboard**: Active blockers, ready-to-ship PRs, flaky alerts, branch health  
+- **Manager Dashboard**: Release readiness and stability at a glance
 
-* Branch, commit, committer, environment, duration.
-* Stored logs, screenshots, stack traces, and error artifacts.
-* Full history with search and comparisons across branches/commits.
+**Key Metrics at a Glance:**
+- Total test executions, pass/fail counts, average duration
+- AI-powered failure breakdown (Bugs vs Flaky vs UI Changes)
+- Concise AI-driven insights highlighting critical issues, emerging trends, and optimization opportunities.
+---
+###  **Test Runs - Complete Execution Intelligence**
 
-💡 **Impact**: Teams never lose track of when a bug appeared, whether it was fixed, or if it resurfaced. Flaky patterns can be spotted with data, not guesswork.
 
-\<screenshot: Test run history + comparison view>
+Every test execution tracked with full context:
+- **Smart Summary**: Failed, Flaky, and Skipped breakdowns by technical cause
+- **AI Insights**: Unique failures,Regression, New failures patterns, and categorization with filters  
+- **Detailed Analysis**: Fast table with search tokens (`s:`, `c:`, `ai:`, `@`, `b:`)
+- **Specs View**: File-centric overview with status bars and retry badges
+- **History Trends**: Run history and execution time over recent builds
+- **Test Case Deep Dive**: Status, AI labels, runtime, attempts, and full evidence
+---
+### **Pull Requests – Smarter, Test-Aware Code Reviews**
+
+Supercharge your PR process with actionable test insights:
+- **Live PR Test Status**: Instantly see the latest test results for every pull request, including pass/fail counts, durations, and flaky test alerts.
+- **Full Run History**: Expand any PR to review all associated test runs, making it easy to track fixes, regressions, and test stability over time.
+---
+###  **Analytics - Data-Driven Test Optimization**
+Turn test runs into actionable trends:
+- **Run Volume Tracking**: Daily test execution patterns and coverage insights
+- **Flakiness Analytics**: Average flakiness rates and unstable test identification  
+- **Performance Metrics**: Speed trends, distribution analysis, and optimization targets
+- **Environment Comparison**: Pass rates, execution counts, and performance across envs
+- **Test Case Analysis**: Individual test trends, duration buckets, and status heatmaps
+
+<center><img src='assets/analytics.gif' width='500'></center>
 
 ---
 
-### 🤖 AI-Powered Failure Categorization
+### **AI Features: Seamless Testing**
 
-Not all test failures are equal. TestDino applies AI models to **classify and cluster failures**:
 
-* 🐞 **Bug** – A genuine application defect.
-* 🎨 **UI Change** – DOM/CSS mismatch due to intentional or untracked UI updates.
-* 🔄 **Flaky** – Inconsistent failure that passes on retry or is environment-sensitive.
-* ❓ **Unknown** – Requires human validation.
+**Comprehensive AI-Driven Failure Categorization:**  
+Automatically classifies test failures by type (Actual Bugs, UI Changes, Unstable Tests, Miscellaneous), assesses priority and impact, and provides branch-aware analysis to pinpoint areas most affected.
 
-💡 **Impact**: Manual triage time drops dramatically. Developers and QA know instantly whether a failure deserves action or can be deprioritized.
+**Insightful Error and Trend Analysis:**  
+Delivers actionable insights by tracking unique errors, distinguishing between emerging and persistent failure patterns, and visualizing error message trends and performance correlations over time.
 
-\<gif: failure categorization in action>
+**Concise Summaries:**
+Provides AI-generated short summaries of test runs, highlighting major events and improvements — so teams instantly understand what happened without digging through logs.
 
----
-
-### 🎯 Smart Insights & Error Clustering
-
-Beyond classification, TestDino **surfaces actionable intelligence**:
-
-* Detects **new vs recurring vs regression** failures.
-* Clusters errors into patterns (timeouts, network instability, assertion mismatches).
-* Highlights unstable areas, flaky tests, and modules with the highest risk.
-
-💡 **Impact**: Release planning becomes proactive. Instead of reacting to random failures, teams focus on the biggest sources of instability.
-
-\<screenshot: insights panel with clustered errors>
+<div style="display: flex; gap: 16px; justify-content: center; align-items: flex-start;">
+  <img src="assets/testrun-ai-insights.gif" width="400px" />
+  <img src="assets/dashboard-insight.png" width="600px" />
+</div>
 
 ---
 
-### 📈 Role-Based Dashboards
-
-Different team members need different information:
-
-* 👨‍💻 **Developers** → Failures tied directly to their commits, with logs and screenshots for faster debugging.
-* 🧪 **QA Engineers** → Insights into flaky tests, coverage gaps, and regression tracking across environments.
-* 📊 **Managers** → High-level stability metrics, release readiness scores, and 7/14/30-day historical summaries.
-
-💡 **Impact**: Reduces reporting overhead and improves accountability. Each role sees a focused, decision-ready view without unnecessary noise.
-
-\<screenshot: Manager dashboard overview>
+###  **Integrations - Seamless Team Workflow**  
+- **Issue Tracking**: Auto-create Jira/Linear tickets with full failure context
+- **Communication**: Slack/Teams notifications with run summaries and quick links
+- **Version Control**: GitHub integration with PR status and commit linking
 
 ---
 
-### 🔗 Team Communication & Integrations
+### **Future Vision**
+- 🔮 **Advanced AI Insights** - Predictive failure analysis and trend forecasting
+- 🌐 **Multi-Framework Support** - Expand beyond Playwright to Cypress, Selenium
+- 📊 **Custom Dashboards** - Build personalized views for your team's workflow
+- 🎯 **Test Impact Analysis** - Understand which tests matter for each code change
 
-TestDino integrates seamlessly into your existing workflows:
 
-* **CI/CD** → GitHub Actions, GitLab CI, Jenkins, CircleCI.
-* **Source Control** → GitHub, GitLab, Bitbucket.
-* **Collaboration** → Slack & Microsoft Teams for alerts, summaries, and notifications.
-* **Issue Tracking** → Jira & Linear for auto-creating issues with logs, screenshots, and failure metadata.
 
-💡 **Impact**: Teams stay aligned without context-switching. Failures are visible in the tools where developers and QA already work, and issues can be filed with complete diagnostic context in one click.
+## Resources
 
-\<screenshot: Slack summary + Jira issue creation>
+### **Documentation**
+- **[Website](https://testdino.com)** - Explore our website
+- **[Getting Started](https://docs.testdino.com/docs)** - Complete setup guide in under 10 minutes
+- **[Platform Guide](https://docs.testdino.com/docs/dashboard/)** - Dashboard, Test Runs, Analytics, and PR integration
+- **[Integrations](https://docs.testdino.com/integrations)** - CI/CD, Jira, Linear, Slack setup guides  
 
----
 
-## 🔮 The Road Ahead
-
-We’re actively building the **next generation of AI test intelligence**:
-
-* 🔮 **Predictive Failure Analysis** – Identify likely flaky tests before they block CI pipelines.
-* 🔄 **Automated Failure Routing** – Assign failures to the correct developer or QA automatically.
-* 🧠 **Deeper Root-Cause Suggestions** – AI-assisted linking between test errors and potential code areas.
-* 🌐 **Cross-Project Analytics** – Consolidated visibility across multiple repos and teams.
-
-👉 Early adopters will influence the roadmap and gain access to advanced features first.
+### **Learning Resources**
+- **[Video Tutorials](https://www.youtube.com/@Testdino1)** - Platform Walkthroughs
+- **[Blog](https://testdino.com/blog)** - Testing insights and industry best practices
 
 ---
 
-## 🤝 Join the Journey
+## Contact 
 
-> *“We created TestDino to give teams clarity every morning. No guesswork, no endless triage meetings — just actionable test intelligence that accelerates shipping with confidence.”*
-> — **CTO, TestDino**
+### **Get Help**
+- **[Help Center](https://help.testdino.com)** - Self-service documentation and FAQs
+- **[Community Forum](https://community.testdino.com)** - Ask questions and share experiences  
+- **[Email Support](mailto:support@testdino.com)** - Direct assistance from our team
 
-🌐 [Website](#) • 📖 [Documentation](#) • 💬 [Community](#) • 🐦 [Twitter](#)
+
+### **🌐 Connect With Us**
+- **[Discord Community](https://discord.gg/testdino)** - Join 2,000+ testing professionals
+- **[Twitter](https://twitter.com/testdino)** - Latest updates and announcements
+- **[LinkedIn](linkedin.com/company/106091224/admin/dashboard)** - Company news and industry insights
 
 
+### **💼 Business Inquiries**
+- **Sales**: [sales@testdino.com](mailto:sales@testdino.com) 
+- **Careers**: [careers@testdino.com](mailto:careers@testdino.com)
 
+---
+
+<div align="center">
+
+### **Ready to Transform Your Testing Workflow?**
+
+**[🚀 Start Free Trial](https://testdino.com/)** • **[📖 Read Documentation](https://docs.testdino.com)** • **[💬 Join Community](https://discord.gg/testdino)**
+
+*Built with ❤️ for the modern testing team*
