@@ -126,10 +126,6 @@ Delivers actionable insights by tracking unique errors, distinguishing between e
 **Concise Summaries:**
 Provides AI-generated short summaries of test runs, highlighting major events and improvements — so teams instantly understand what happened without digging through logs.
 
-<div style="display: flex; gap: 16px; justify-content: center; align-items: flex-start;">
-  <img src="assets/testrun-ai-insights.gif" width="400px" />
-  <img src="assets/dashboard-insight.png" width="600px" />
-</div>
 
 ---
 
