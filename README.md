@@ -1,8 +1,8 @@
-<center>
+<p align="center">
   <a href="https://testdino.com" target="_blank" rel="noopener noreferrer">
     <img src="assets/logo.png" width="400px" alt="TestDino Logo">
   </a>
-</center>
+</p>
 
 <p align="center">
   <a href="#why-testdino" >Why Testdino?</a> •
@@ -28,8 +28,6 @@ Testdino empowers QA and development teams to ship faster and with greater confi
 
 3. **Centralizes Test Data :** All test runs, pull requests, branches, and environments are unified in one platform, giving teams a single source of truth and accelerating decision-making.
 
-
----
 ## Key Features
 
 - **AI Failure Classification** - Automatically categorize as Actual Bug, UI Change, Unstable, or Misc
@@ -43,7 +41,6 @@ Testdino empowers QA and development teams to ship faster and with greater confi
 - **Cross-Environment** - Compare test performance across Prod, Staging, Dev environments
 - **Release Readiness** - Get clear signals on what's safe to ship
 
----
 
 ##  Getting Started
 
@@ -79,7 +76,6 @@ That's it! Your next test run will appear in Testdino with AI-powered insights, 
 
 **[Complete Setup Guide →](https://docs.testdino.com/docs/playwright/)**
 
----
 
 ## Feature Overview
 
@@ -171,7 +167,6 @@ Provides AI-generated short summaries of test runs, highlighting major events an
 - **[Video Tutorials](https://www.youtube.com/@Testdino1)** - Platform Walkthroughs
 - **[Blog](https://testdino.com/blog)** - Testing insights and industry best practices
 
----
 
 ## Contact 
 
