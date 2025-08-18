@@ -8,13 +8,13 @@
   <a href="#why-testdino" >Why Testdino?</a> •
   <a href="#key-features" >Key Features</a> •
   <a href="#getting-started" >Getting Started</a> •
-  <a href="#feature-overview" >Feature Overview</a> •
-  <a href="#resources" >Documentation & Resources</a> •
-  <a href="#contact">Contact & Support</a> •
+  <a href="#feature-overview" >Features Overview</a> •
+  <a href="#resources" >Documentations & Resources</a> •
+  <a href="#contact">Contacts</a> 
 </p>
 
----
-<h3 align='center'> The AI-Powered Playwright Test Intelligence Platform </h3>
+
+<h3 align='center'> AI-Powered Playwright Test Report Analysis Platform </h3>
 
 Testdino empowers QA and development teams to ship faster and with greater confidence by transforming raw Playwright test results into clear, actionable insights. Instead of sifting through noisy logs and endless reports, teams get instant visibility into what failed, why it matters, and what to do next. With AI-driven failure classification, trend analytics, and seamless integration into your existing workflow, Testdino eliminates manual triage and highlights the issues that truly impact your releases—so you can focus on building great products, not chasing test noise.
 
